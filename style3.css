@@ -3,17 +3,52 @@
 */
 
 @import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
+
+@font-face{
+    font-family: 'Louis George Cafe';
+    font-weight: normal;
+    src: 
+        local('Louis George Cafe'),
+        local('Louis-George-Cafe'),
+        url('./fonts/LouisGeorgeCafe.ttf') format('truetype'),
+        url('./fonts/LouisGeorgeCafe.woff') format('woff');
+}
+
+@font-face{
+    font-family: 'Louis George Cafe';
+    font-weight: bold;
+    src: 
+        local('Louis George Cafe Bold'),
+        local('Louis-George-Cafe-Bold'),
+        url('./fonts/LouisGeorgeCafeBold.ttf') format('truetype'),
+        url('./fonts/LouisGeorgeCafeBold.woff') format('woff');
+}
+
+@font-face{
+    font-family: 'Louis George Cafe';
+    font-weight: normal;
+    src: 
+        local('Louis George Cafe Italic'),
+        local('Louis-George-Cafe-Italic'),
+        url('./fonts/LouisGeorgeCafeItalic.ttf') format('truetype'),
+        url('./fonts/LouisGeorgeCafeItalic.woff') format('woff');
+}
+
 body {
-    font-family: 'Poppins', sans-serif;
-    background: #fafafa;
+    font-family: 'Louis George Cafe', sans-serif;
+    /* font-family: 'Poppins', sans-serif; */
+    background: #202048;
 }
 
 p {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Louis George Cafe', sans-serif;
+    /* font-family: 'Poppins', sans-serif; */
     font-size: 1.1em;
     font-weight: 300;
     line-height: 1.7em;
-    color: #999;
+    color: #ffffff;
+    padding-left: max(5vh, 50px);
+    padding-right: max(5vh, 50px);
 }
 
 a,
@@ -24,26 +59,118 @@ a:focus {
     transition: all 0.3s;
 }
 
+h1{
+    padding-left: max(5vh, 50px);
+    padding-right: max(5vh, 50px);
+}
+
+footer{
+    background-color: #3D66B0;
+    margin-top: max(5vh, 50px);
+    padding-top: min(50px, 5vh);
+    padding-bottom: min(50px, 5vh);
+    padding-right: min(50px, 5vh);
+    padding-left: min(50px, 5vh);
+}
+
+.centered-title{
+    text-align: center;
+    padding-bottom: min(50px, 5vh);
+}
+
+#titre-projet{
+    padding-top: min(50px, 5vh);
+    padding-right: min(50px, 5vh);
+    padding-left: min(50px, 5vh);
+    margin-left: min(30px, 10vw);
+    margin-right: min(30px, 10vw);
+    background-color: #f5ca1f;
+    color: #202048;
+}
+
+#titre-ong{
+    padding-top: min(50px, 5vh);
+    padding-right: min(50px, 5vh);
+    padding-left: min(50px, 5vh);
+    margin-left: min(30px, 10vw);
+    margin-right: min(30px, 10vw);
+    background-color: #C82283;
+    color: #202048;
+}
+
+h2{
+    padding-left: max(5vh, 50px);
+    padding-right: max(5vh, 50px);
+    color: #C82283;
+}
+
 .navbar {
-    padding: 15px 10px;
-    background: #fff;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    max-height: 40px;
+    z-index: 998;
+    padding: 0px 0px;
+    background-color: #1A1A41;
     border: none;
     border-radius: 0;
-    margin-bottom: 40px;
-    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+    margin-bottom: 0px;
+    /* box-shadow: 1px 1px 3px #1A1A41; */
+}
+
+#manzakin-navbar {
+    justify-content: space-between;
+    background: #1A1A41;
+    background-color: #1A1A41 !important;
+}
+
+#navbarLogo{
+    /* height: max(7vh,100px); */
+    height:120px;
+    max-width: 300px - 20vh;
+    float: left;
+    padding-bottom: 4vh;
+}
+
+.menuSVG{
+    height: 4vh;
+    padding-right: 2vh;
+    padding-left: 2vh;
 }
 
 .navbar-btn {
+    max-height: 4vh;
+    background: #1A1A41;
+    background-color: #1A1A41;
+    float: left;
     box-shadow: none;
     outline: none !important;
     border: none;
+}
+
+#sidebarCollapse{
+    height: 50%;
+    background: #1A1A41;
+    border-width: 0;
+    border-color: #1A1A41;
+    transform: scale(0.7);
+    box-sizing: content-box;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+#topLogoNavbar{
+    height: 30px;
+    padding-left: 15px;
 }
 
 .line {
     width: 100%;
     height: 1px;
     border-bottom: 1px dashed #ddd;
-    margin: 40px 0;
+    margin: 60px 0;
 }
 
 /* ---------------------------------------------------
@@ -51,13 +178,13 @@ a:focus {
 ----------------------------------------------------- */
 
 #sidebar {
-    width: 250px;
+    width: 300px;
     position: fixed;
     top: 0;
-    left: -250px;
+    left: -300px;
     height: 100vh;
     z-index: 999;
-    background: #7386D5;
+    background: #1A1A41;
     color: #fff;
     transition: all 0.3s;
     overflow-y: scroll;
@@ -73,7 +200,7 @@ a:focus {
     height: 35px;
     line-height: 35px;
     text-align: center;
-    background: #7386D5;
+    background: #1A1A41;
     position: absolute;
     top: 10px;
     right: 10px;
@@ -85,7 +212,7 @@ a:focus {
 
 #dismiss:hover {
     background: #fff;
-    color: #7386D5;
+    color: #1A1A41;
 }
 
 .overlay {
@@ -105,12 +232,13 @@ a:focus {
 
 #sidebar .sidebar-header {
     padding: 20px;
-    background: #6d7fcc;
+    background: #1A1A41;
+    color: #fff;
 }
 
 #sidebar ul.components {
     padding: 20px 0;
-    border-bottom: 1px solid #47748b;
+    background: #1A1A41;
 }
 
 #sidebar ul p {
@@ -125,14 +253,14 @@ a:focus {
 }
 
 #sidebar ul li a:hover {
-    color: #7386D5;
+    color: #1A1A41;
     background: #fff;
 }
 
 #sidebar ul li.active>a,
 a[aria-expanded="true"] {
     color: #fff;
-    background: #6d7fcc;
+    background: #1A1A41;
 }
 
 a[data-toggle="collapse"] {
@@ -182,10 +310,12 @@ a.article:hover {
 
 #content {
     width: 100%;
-    padding: 20px;
+    padding: 0px;
     min-height: 100vh;
     transition: all 0.3s;
     position: absolute;
+    background: #202048;
+    background-color: #202048;
     top: 0;
     right: 0;
 }
@@ -214,34 +344,222 @@ a.article:hover {
 
 /* Style all font awesome icons */
 .fab {
-    padding: 20px;
+    max-height: 30px;
+    max-width: 30px;
     font-size: 30px;
-    width: 50px;
     text-align: center;
     text-decoration: none;
+    box-sizing: content-box;
+    transform: scale(0.7);
+    outline: none !important;
+  }
+
+  .fabF {
+    max-height: 50px;
+    max-width: 50px;
+    font-size: 50px;
+    text-align: center;
+    text-decoration: none;
+    box-sizing: content-box;
+    transform: scale(1.0);
+    outline: none !important;
+    margin-right: min(20px, 2%);
   }
   
   /* Add a hover effect if you want */
   .fab:hover {
-    opacity: 0.7;
+    color: #f5ca1f;
   }
   
   /* Set a specific color for each brand */
   
   /* Facebook */
   .fa-facebook {
-    background: #3B5998;
+    background:#1A1A41;
     color: white;
   }
   
   /* Instagram */
   .fa-instagram {
-    background: #55ACEE;
+    background: #1A1A41;
     color: white;
   }
 
   /* Youtube */
   .fa-youtube {
-    background: #55ee76;
+    background: #1A1A41;
     color: white;
+  }
+
+  .fa-linkedin-in{
+      background: #1A1A41;
+      color: white;
+  }
+
+  /* Facebook for footer */
+  .fa-facebookF {
+    background:#3D66B0;
+    color: white;
+  }
+  
+  /* Instagram for footer */
+  .fa-instagramF {
+    background: #3D66B0;
+    color: white;
+  }
+
+  /* Youtube for footer */
+  .fa-youtubeF {
+    background: #3D66B0;
+    color: white;
+  }
+
+  /* LinkedIn for footer */
+  .fa-linkedin-inF{
+      background: #3D66B0;
+      color: white;
+  }
+
+  .fa-align-left{
+      background: #1A1A41;
+      color: white;
+  }
+
+  .img_accueil {
+      width: 100%;
+      position: absolute;
+      bottom: max(0%,100vh - 100vw*(9/16));
+      padding-bottom: 0px;
+  }
+
+  .txt_accueil {
+    width: 100%;
+    position: absolute;
+    bottom: max(0%,100vh - 100vw*(9/16));
+    padding-bottom: 20px;
+}
+
+  .social-networks-container {
+      padding-top: 2px;
+      float: right;
+      box-sizing: content-box;
+  }
+
+  #text-content{
+      position: absolute;
+      top: min(100%, 100vw*(9/16));
+  }
+
+  /* .logoLink{
+    margin: 0;
+    position: relative;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+  } */
+
+  .contact-email{
+    font-size: 1.1em;
+    font-weight: 300;
+    line-height: 1.7em;
+    color: #ffffff;
+    padding-left: max(5vh, 50px);
+    padding-right: max(5vh, 50px);
+  }
+
+  .contact-number{
+    font-size: 1.0em;
+    font-weight: 300;
+    line-height: 1.7em;
+    color: #f5ca1f;
+    padding-left: max(5vh, 50px);
+    padding-right: max(5vh, 50px);
+  }
+
+  .row {
+    display: flex;
+  }
+  
+  .column {
+    flex: 50%;
+  }
+
+  #footer-sn{
+    padding-left: max(5vh, 50px);
+    padding-right: max(5vh, 50px);
+  }
+
+  #fsf-picture{
+    width: 100%;
+    padding-left: max(5vh, 50px);
+    padding-right: max(5vh, 50px);
+    padding-bottom: max(5vh, 50px);
+  }
+
+  #carte-am{
+    width: 100%;
+    padding-left: max(5vh, 50px);
+    padding-right: max(5vh, 50px);
+    padding-bottom: max(5vh, 50px);
+  }
+
+  #trombi{
+    width: 100%;
+    padding-top: max(3vh, 30px);
+    padding-bottom: max(3vh, 30px);
+  }
+
+  #presta{
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+    width: 500px;
+    padding-left: max(5vh, 50px);
+    padding-right: max(5vh, 50px);
+    padding-bottom: max(5vh, 50px);
+  }
+
+  #mc_embed_signup{
+    font-family: 'Louis George Cafe', sans-serif;
+    /* font-family: 'Poppins', sans-serif; */
+    font-size: 1.1em;
+    font-weight: 300;
+    line-height: 1.7em;
+    color: #ffffff;
+    padding-left: max(5vh, 50px);
+    padding-right: max(5vh, 50px);
+  }
+
+  .indicates-required{
+      font-size: 0.7em;
+      padding-left: max(5vh, 50px);
+  }
+
+  .content__gdpr{
+    padding-top: 20px;
+    }
+
+  .content__gdprLegal{
+      font-size: 0.5em;
+  }
+
+  .mc-field-group1{
+      padding-left: max(5vh, 50px);
+  }
+
+  .clear{
+    padding-left: max(5vh, 50px);
+  }
+
+  .sponsorLogo{
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    max-height: 80px;
+  }
+
+  .sponsors{
+      margin-top: 20px;
+      text-align: center;
+      align-content: center;
   }
