@@ -1,138 +1,303 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html>
 
 <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-9DH7XCVS0Q"></script>
-    <meta charset="utf-8">
-    <title>Manzakin</title>
-    <meta name="description" content="Site internet de la fanfare solidaire Manzakin">
-    <meta name="author" content="">
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    gtag('config', 'G-9DH7XCVS0Q');
+    </script>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Manzakin</title>
+
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <!-- Our Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Scrollbar Custom CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
+
+    <!-- Font Awesome JS -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
+    <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/5.0.13/css/font-awesome.min.css" rel="stylesheet"> -->
+    <script src="https://kit.fontawesome.com/4e51f691d1.js" crossorigin="anonymous"></script>
+
+
+
+    <!-- favicons
+    ================================================== -->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
 
 </head>
 
 <body>
+
     <div class="wrapper">
         <!-- Sidebar  -->
         <nav id="sidebar">
+            <div id="dismiss">
+                <i class="fas fa-arrow-left"></i>
+            </div>
+
             <div class="sidebar-header">
-                <h3>Bootstrap Sidebar</h3>
+                <img src="./pictures/manzakinSVGblanc.svg" id="navbarLogo">
             </div>
 
             <ul class="list-unstyled components">
-                <p>Dummy Heading</p>
-                <li class="active">
-                    <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Home</a>
-                    <ul class="collapse list-unstyled" id="homeSubmenu">
-                        <li>
-                            <a href="#">Home 1</a>
-                        </li>
-                        <li>
-                            <a href="#">Home 2</a>
-                        </li>
-                        <li>
-                            <a href="#">Home 3</a>
-                        </li>
-                    </ul>
+                <p>Fanfare solidaire internationale</p>
+                <li>
+                    <a href="#"><img src="./pictures/menu.svg" class="menuSVG">Le projet</a>
                 </li>
                 <li>
-                    <a href="#">About</a>
+                    <a href="#"><img src="./pictures/menu.svg" class="menuSVG">Qui sommes-nous?</a>
                 </li>
                 <li>
-                    <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Pages</a>
-                    <ul class="collapse list-unstyled" id="pageSubmenu">
-                        <li>
-                            <a href="#">Page 1</a>
-                        </li>
-                        <li>
-                            <a href="#">Page 2</a>
-                        </li>
-                        <li>
-                            <a href="#">Page 3</a>
-                        </li>
-                    </ul>
+                    <a href="#"><img src="./pictures/menu.svg" class="menuSVG">Evènements</a>
                 </li>
                 <li>
-                    <a href="#">Portfolio</a>
-                </li>
-                <li>
-                    <a href="#">Contact</a>
+                    <a href="#"><img src="./pictures/menu.svg" class="menuSVG">Blog</a>
                 </li>
             </ul>
 
-            <ul class="list-unstyled CTAs">
+            <!-- <ul class="list-unstyled CTAs">
                 <li>
                     <a href="https://bootstrapious.com/tutorial/files/sidebar.zip" class="download">Download source</a>
                 </li>
                 <li>
                     <a href="https://bootstrapious.com/p/bootstrap-sidebar" class="article">Back to article</a>
                 </li>
-            </ul>
+            </ul> -->
+        </nav>
+
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark" id="manzakin-navbar">
+            <div id="navbar-left">
+                <a class="navbar-brand" href="#"><img src="./pictures/manzakinSVGblanc.svg" id="topLogoNavbar"></a>
+                    <button type="button" id="sidebarCollapse" class="btn btn-info">
+                        <i class="fas fa-align-left"></i>
+                        <!-- <span>Toggle Sidebar</span> -->
+                    </button>
+            </div>
+            <!-- <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fab fa-align-justify"></i>
+            </button> -->
+            <div class="social-networks-container">
+                <a href="https://www.linkedin.com/company/manzakin/" class="fab fa-linkedin-in fa-fw"></a>
+                <a href="https://www.youtube.com/channel/UC0edp48yXyI8VV8YeMjekFw/featured" class="fab fa-youtube"></a>
+                <a href="https://www.instagram.com/manzakinproject/?hl=fr" class="fab fa-instagram"></a>
+                <a href="https://www.facebook.com/ManzakinFSF/" class="fab fa-facebook"></a>
+            </div>
         </nav>
 
         <!-- Page Content  -->
         <div id="content">
+            
+            
+            
+            
+            
+            
+            <img src="./pictures/accueil.svg" class="img_accueil">
+            
+            <div id="text-content">
+                <h1 id="titre-projet">17 étudiants, une fanfare solidaire, un projet</h1>
 
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                <div class="container-fluid">
+                        <p align="justify">Manzakin, c’est un projet solidaire et musical. Dans la continuité des projets Fanfare Sans Frontières, notre but est de partager ce que l’apprentissage de la musique nous a offert avec des jeunes issus de milieux défavorisés. Nous voulons voyager dans 3 pays en développement, pendant 6 mois, pour mettre en place des ateliers d’éveil musical et artistique en partenariat avec des ONGs locales.</p>
 
-                    <button type="button" id="sidebarCollapse" class="btn btn-info">
-                        <i class="fas fa-align-left"></i>
-                        <span>Toggle Sidebar</span>
-                    </button>
-                    <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <i class="fas fa-align-justify"></i>
-                    </button>
+                    <div class="row">
+                        <div class="column">
+                            <h2>Fanfare sans frontières</h2>
 
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="nav navbar-nav ml-auto">
-                            <li class="nav-item active">
-                                <a class="nav-link" href="#">Page</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Page</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Page</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Page</a>
-                            </li>
-                        </ul>
+                                <p align="justify">
+                                    <a href=https://www.fanfaresansfrontieres.org/ >Fanfare Sans Frontières</a> est une association loi 1901 qui supporte et assiste des fanfares solidaires, comme Manzakin ! C’est l’association qui nous permet d’avoir des conseils, des rencontres et des retours d’expériences de projets précédents, et de monter le nôtre comme des chefs.
+                                </p>
+
+                                <h2>La musique comme outil de développement personnel</h2>
+
+                                <p align="justify">
+                                    Les compétences interpersonnelles, comme la communication, la créativité, le travail en groupe ou encore la gestion de projets sont souvent laissées de côté par les systèmes éducatifs traditionnels. Pourtant des organismes comme le Forum Économique Mondial les considèrent comme essentielles pour les citoyens de demain : et si l’expression artistique était un bon moyen de les développer ? Chez Manzakin, nous avons tous beaucoup appris au travers de la musique et des arts du spectacle, depuis tous petits pour certains, ou depuis à peine 2 ans pour d’autres. En organisant des ateliers et des projets avec des jeunes issus de milieux défavorisés, nous voulons les encourager à développer ces compétences, et aider les ONGs locales à former les citoyens de demain !
+                                </p>
+                        </div>
+
+                        <div class="column">
+                            <h2>Et le départ, c’est pour quand ?</h2>
+
+                                <p align="justify">
+                                    Janvier 2021 ! C’est l’objectif que nous nous sommes fixé pour lancer notre voyage. Il ne faut pas aller plus vite que la musique : nous sommes encore étudiants, et il faut passer nos examens avant de partir à l’autre bout du monde... En attendant, nous mettons au point les ateliers, et nous réalisons des prestations de fanfare pour financer le projet. On en profite pour étoffer notre répertoire, et si la situation sanitaire nous le permet, peut-être pourrons nous faire profiter des jeunes d’Île-de-France de nos ateliers !
+                                </p>
+
+                            <img id="fsf-picture"
+                                src="./pictures/fsf.png"
+                                alt="Fanfare sans frontières">
+                        </div>
+                    </div>
+
+                    
+
+                <h1 id="titre-ong">Nos ONG partenaires</h1> 
+
+                <div class="row">
+                    <div class="column">
+                        <img src="./pictures/carte_am.svg" id="carte-am">
+                    </div>
+
+                    <div class="column">
+                        <h2>ONG 1 (Equateur)</h2>
+
+                            <p align="justify">
+                                Description 1
+                            </p>
+                        
+                        <h2>ONG 2 (Nicaragua)</h2>
+
+                            <p align="justify">
+                                Description 2
+                            </p>
+
                     </div>
                 </div>
-            </nav>
+                
+                <h1 id="titre-projet">Qui sommes-nous ?</h1>
 
-            <h2>Collapsible Sidebar Using Bootstrap 4</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <p align="justify">
+                    Nous sommes 18 étudiants ingénieurs de l'Ecole CentraleSupélec venant de tous horizons qui partageons la passion de la musique et du partage.
 
-            <div class="line"></div>
+                    <img src="./pictures/trombi_cf.png" id="trombi">
+                </p>
 
-            <h2>Lorem Ipsum Dolor</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <h1 id="titre-projet">Nous soutenir</h1>
 
-            <div class="line"></div>
+                    <p>
+                        Vous souhaitez soutenir notre action et participer à votre façon à nos ateliers ? Vous pouvez nous aider en participant financièrement à travers <a href="https://lydia-app.com/collect/20303-manzakin/fr">
+                    <font color=#ff0><u>cette cagnotte Lydia</u></font></a>.</p>
 
-            <h2>Lorem Ipsum Dolor</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <h1 id="titre-ong">Nos prestations</h1>
 
-            <div class="line"></div>
+                    <h2>Envie d'animer un de vos évènments?</h2> 
+                    <p>Manzakin, c’est une fanfare qui sait animer la foule, faire danser et chanter! Nous vous ferons voyager avec notre répertoire!</p>       
 
-            <h3>Lorem Ipsum Dolor</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    <div class="row">
+                        <div class="column">
+                            <h2>Les évènements que l'on anime</h2>
+
+                                <p align="justify">
+                                    Chacun de nos membres ont près de 2 ans d'expérience dans l'animation musicale, qu'il s'agisse de fêtes de village, d'anniversaires, de mariages et bien d'autres évènements festifs!
+                                </p>
+
+                                <img id="presta"
+                                src="./pictures/presta.jpg">
+                        </div>
+
+                        <div class="column">
+                            <h2>Notre répertoire</h2>
+
+                                <p align="justify">
+                                    Notre musique est très diverse et vous fera voyager, que soit à la Nouvelle Orléans avec notre musique de Brass Band ou de jazz, ou dans des régions plus froides avec nos morceaux venant d'Europe de l'Est. Nous jouons aussi nos propres arrangements de grands classiques de la musique française ou des morceaux plus modernes ! L'ambiance sera présente !
+                                </p>
+
+                            <h2>Notre expertise</h2>
+
+                                <p align="justify">
+                                    Nous avons déja joué sous d'autres noms dans de nombreuses destinations en Europe au cours des deux dernières années, que ce soit en France ou même dans les pays frontaliers! Nous avons déja effectué de nombreuses prestations et joué dans différents bars, festivals.
+                                </p>
+
+                        </div>
+                    </div>
+
+                <!-- Begin Mailchimp Signup Form -->
+                <h1 id="titre-projet">Envie de recevoir de nos nouvelles? Inscrivez-vous à notre newsletter!</h2>
+                <div id="mc_embed_signup">
+                    <form action="https://manzakin.us7.list-manage.com/subscribe/post?u=130c0bc685f081728c15848e5&amp;id=9220415a9b" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                        <div id="mc_embed_signup_scroll">
+                        <div class="indicates-required">* champs requis</div>
+                        <div class="mc-field-group1">
+                            <label for="mce-EMAIL">Adresse mail  <span class="asterisk">*</span>
+                        </label>
+                            <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
+                        </div>
+                        <div class="mc-field-group1">
+                            <label for="mce-FNAME">Prénom  <span class="asterisk">*</span>
+                        </label>
+                            <input type="text" value="" name="FNAME" class="required" id="mce-FNAME">
+                        </div>
+                        <div id="mergeRow-gdpr" class="mergeRow gdpr-mergeRow content__gdprBlock mc-field-group">
+                            <div class="content__gdpr">
+                                <label>Traitement de vos données personnelles</label>
+                                <p>S'il vous plait choisissez les moyens par lesquels vous souhaitez recevoir des nouvelles du projet Manzakin :</p>
+                                <fieldset class="mc_fieldset gdprRequired mc-field-group1" name="interestgroup_field">
+                                <label class="checkbox subfield" for="gdpr_48096"><input type="checkbox" id="gdpr_48096" name="gdpr[48096]" value="Y" class="av-checkbox "><span>Email</span> </label>
+                                </fieldset>
+                                <p>Vous pouvez vous désinscrire quand vous le souhaitez en cliquant sur le lien en bas de nos mails. Vos informations ne seront utilisées que dans le cadre de la newsletter.</p>
+                            </div>
+                            <div class="content__gdprLegal">
+                                <p>We use Mailchimp as our marketing platform. By clicking below to subscribe, you acknowledge that your information will be transferred to Mailchimp for processing. <a href="https://mailchimp.com/legal/" target="_blank">Learn more about Mailchimp's privacy practices here.</a></p>
+                            </div>
+                        </div>
+                        <div id="mce-responses" class="clear">
+                            <div class="response" id="mce-error-response" style="display:none"></div>
+                            <div class="response" id="mce-success-response" style="display:none"></div>
+                        </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                        <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_130c0bc685f081728c15848e5_9220415a9b" tabindex="-1" value=""></div>
+                        <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+                        </div>
+                    </form>
+                </div>
+                
+                <!--End mc_embed_signup-->
+
+
+                <footer>
+
+                    <h1 class="centered-title">Contactez nous</h1>
+
+                    <div class="row">
+                        <div class="column">
+                            <a href="mailto:contact@manzakin.org" class="contact-email">contact@manzakin.org</a>
+                            <p class="contact-number">+33 6 46 63 16 26</p>
+                        </div>
+
+                        <div class="column">
+                            <span id="footer-sn">
+                                <a href="https://www.facebook.com/ManzakinFSF/"><i class="fab fa-facebook fa-fw fabF fa-facebookF"></i></a>
+                                <a href="https://www.instagram.com/manzakinproject/?hl=fr"><i class="fab fa-instagram fa-fw fabF fa-instagramF"></i></a>
+                                <a href="https://www.youtube.com/channel/UC0edp48yXyI8VV8YeMjekFw/featured"><i class="fab fa-youtube fa-fw fabF fa-youtubeF"></i></a>
+                                <a href="https://www.linkedin.com/company/manzakin/"><i class="fab fa-linkedin-in fa-fw fabF fa-linkedin-inF"></i></a>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="sponsors">
+                        <img class="sponsorLogo" src="./pictures/BL.png">
+                        <img class="sponsorLogo" src="./pictures/CS.png">
+                    </div>
+                </footer>
+
+                
+            
+                
+            </div>
+
         </div>
     </div>
 
-    
+    <div class="overlay"></div>
 
-    
-    <img src="./pictures/accueil.png" id="image_accueil">
-
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <!-- jQuery CDN - Slim version (=without AJAX) -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <!-- Popper.JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+    <!-- jQuery Custom Scroller CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
 
     <script type="text/javascript">
         $(document).ready(function () {
@@ -140,8 +305,14 @@
                 theme: "minimal"
             });
 
+            $('#dismiss, .overlay').on('click', function () {
+                $('#sidebar').removeClass('active');
+                $('.overlay').removeClass('active');
+            });
+
             $('#sidebarCollapse').on('click', function () {
-                $('#sidebar, #content').toggleClass('active');
+                $('#sidebar').addClass('active');
+                $('.overlay').addClass('active');
                 $('.collapse.in').toggleClass('in');
                 $('a[aria-expanded=true]').attr('aria-expanded', 'false');
             });
@@ -150,4 +321,3 @@
 </body>
 
 </html>
-
