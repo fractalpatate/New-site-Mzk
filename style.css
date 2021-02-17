@@ -35,14 +35,14 @@
 }
 
 body {
-    font-family: 'Louis George Cafe', sans-serif;
-    /* font-family: 'Poppins', sans-serif; */
+    /* font-family: 'Louis George Cafe', sans-serif; */
+    font-family: 'Poppins', sans-serif;
     background: #202048;
 }
 
 p {
-    font-family: 'Louis George Cafe', sans-serif;
-    /* font-family: 'Poppins', sans-serif; */
+    /* font-family: 'Louis George Cafe', sans-serif; */
+    font-family: 'Poppins', sans-serif;
     font-size: 1.1em;
     font-weight: 300;
     line-height: 1.7em;
@@ -69,8 +69,9 @@ footer{
     margin-top: max(5vh, 50px);
     padding-top: min(50px, 5vh);
     padding-bottom: min(50px, 5vh);
-    padding-right: min(50px, 5vh);
+    /* padding-right: min(50px, 5vh); */
     padding-left: min(50px, 5vh);
+    width: 100%;
 }
 
 .centered-title{
@@ -78,7 +79,7 @@ footer{
     padding-bottom: min(50px, 5vh);
 }
 
-#titre-projet{
+.titre-projet{
     padding-top: min(50px, 5vh);
     padding-right: min(50px, 5vh);
     padding-left: min(50px, 5vh);
@@ -88,7 +89,7 @@ footer{
     color: #202048;
 }
 
-#titre-ong{
+.titre-ong{
     padding-top: min(50px, 5vh);
     padding-right: min(50px, 5vh);
     padding-left: min(50px, 5vh);
@@ -182,7 +183,7 @@ h2{
     position: fixed;
     top: 0;
     left: -300px;
-    height: 100vh;
+    height: 200vh;
     z-index: 999;
     background: #1A1A41;
     color: #fff;
@@ -218,8 +219,8 @@ h2{
 .overlay {
     display: none;
     position: fixed;
-    width: 100vw;
-    height: 100vh;
+    width: 200vw;
+    height: 200vh;
     background: rgba(0, 0, 0, 0.7);
     z-index: 998;
     opacity: 0;
@@ -307,6 +308,10 @@ a.article:hover {
 /* ---------------------------------------------------
     CONTENT STYLE
 ----------------------------------------------------- */
+
+html{
+  scroll-behavior: smooth;
+}
 
 #content {
     width: 100%;
@@ -501,6 +506,9 @@ a.article:hover {
     padding-left: max(5vh, 50px);
     padding-right: max(5vh, 50px);
     padding-bottom: max(5vh, 50px);
+    vertical-align: middle;
+    height: 100%;
+    display: inline-block;
   }
 
   #trombi{
@@ -520,8 +528,8 @@ a.article:hover {
   }
 
   #mc_embed_signup{
-    font-family: 'Louis George Cafe', sans-serif;
-    /* font-family: 'Poppins', sans-serif; */
+    /* font-family: 'Louis George Cafe', sans-serif; */
+    font-family: 'Poppins', sans-serif;
     font-size: 1.1em;
     font-weight: 300;
     line-height: 1.7em;
@@ -547,6 +555,10 @@ a.article:hover {
       padding-left: max(5vh, 50px);
   }
 
+  #prenomID{
+    margin-right: 44px;
+  }
+
   .clear{
     padding-left: max(5vh, 50px);
   }
@@ -563,3 +575,12 @@ a.article:hover {
       text-align: center;
       align-content: center;
   }
+
+  .logoONG{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    align-content: center;
+    padding-left: max(5vh, 50px);
+    padding-right: max(5vh, 50px);
+}
